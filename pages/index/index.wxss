@@ -1,0 +1,312 @@
+/**index.wxss**/
+.search-box{
+  height: 82rpx;
+  display: flex;
+  background-color: #d43b33;
+}
+.microphone{
+  flex: 0 0 94rpx;
+  text-align: center;
+}
+.microphone image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 17rpx;
+}
+.search{
+  flex: 1;
+  position: relative;
+}
+.search input{
+  height: 58rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  margin-top: 12rpx;
+  border-radius: 29rpx;
+  background: #fff;
+  color: #b4b4b4;
+  font-size: 26rpx;
+}
+.search .placeholder{
+  position: absolute;
+  left: 0rpx;
+  top: 20rpx;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.search .placeholder text{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  color: #b4b4b4;
+}
+.underway{
+  flex: 0 0 94rpx;
+  text-align: center;
+}
+.underway image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 17rpx;
+}
+.btn-area{
+  height: 78rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.btn-area view{
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+}
+.btn-area view text{
+  height: 74rpx;
+  border-bottom: 4rpx solid #fff;
+  display:inline-block;
+  line-height:74rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.btn-area view .active{
+  border-bottom: 4rpx solid #d43b33;
+}
+.banner-pic{
+  width: 750rpx;
+  height: 292rpx;
+}
+.banner-pic image{
+  width: 750rpx;
+  height: 292rpx;
+}
+.recommend{
+  height: 198rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: 1rpx solid #e7e8ea;
+}
+.recommend .recommend-item{
+  flex: 1;
+  text-align: center;
+}
+.recommend .recommend-item view{
+  display: inline-block;
+  width: 108rpx;
+  height: 108rpx;
+  margin-top: 24rpx;
+  border: 1px solid #d43b33;
+  border-radius: 50%;
+}
+.recommend .recommend-item .recommend-date{
+  position: relative;
+}
+.recommend .recommend-item .recommend-date text{
+  position: absolute;
+  top: 28rpx;
+  left: 32rpx;
+  color: #d43b33;
+  font-size: 14px;
+}
+.recommend .recommend-item image{
+  width: 54rpx;
+  height: 54rpx;
+  margin-top: 27rpx;
+}
+.recommend .recommend-item text{
+  display: block;
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #333;
+}
+.recommend-song-list{
+  padding-bottom: 40rpx;
+}
+.recommend-song-list-title{
+  font-size: 0;
+  padding-top: 38rpx;
+}
+.recommend-song-list-title text{
+  font-size: 28rpx;
+  border-left: 5rpx solid #d43b33;
+  padding-left: 16rpx;
+  color:#333;
+}
+.recommend-song-list-title image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+.recommend-song-content{
+  overflow: hidden;
+}
+.recommend-item{
+  width: 236rpx;
+  float: left;
+  margin-left: 7rpx;
+  margin-right: 7rpx;
+}
+.recommend-item-pic{
+  width: 236rpx;
+  height: 236rpx;
+  position: relative;
+  margin-top: 37rpx;
+}
+.recommend-item-pic .playCount{
+  position: absolute;
+  top: 8rpx;
+  right: 12rpx;
+  font-size: 0;
+}
+.recommend-item-pic .playCount image{
+  width: 22rpx;
+  height: 22rpx;
+  display: inline-block;
+}
+.recommend-item-pic .playCount text{
+  font-size: 22rpx;
+  color: #fff;
+  display: inline-block;
+  margin-top: 0;
+  line-height: 22rpx;
+}
+.recommend-item-pic image{
+  width: 100%;
+  height: 100%;
+}
+.recommend-item text{
+  color:#333;
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  letter-spacing: 2rpx;
+  word-break: break-all;
+  padding-left: 10rpx;
+  padding-right: 12rpx;
+  display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.exclusive-small{
+  overflow: hidden;
+  margin-top: 28rpx;
+}
+.exclusive-small .exclusive-small-item{
+  width: 357rpx;
+  float: left;
+  margin-left:9rpx;
+  margin-right:9rpx;
+}
+.exclusive-small-item-pic{
+  width: 357rpx;
+  height: 222rpx;
+  position: relative;
+}
+.exclusive-small-item-pic .icon{
+  width: 43rpx;
+  height: 43rpx;
+  position: absolute;
+  top: 12rpx;
+  left: 12rpx;
+}
+.exclusive-small-item-pic image{
+  width: 100%;
+  height: 100%;
+}
+.exclusive-small .exclusive-small-item text{
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  letter-spacing: 2rpx;
+  word-break: break-all;
+  padding-left: 10rpx;
+  padding-right: 12rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #333;
+}
+.exclusive-big{
+  margin-top: 24rpx;
+}
+.exclusive-big-item-pic{
+  width: 750rpx;
+  height: 267rpx;
+  position: relative;
+}
+.exclusive-big-item-pic .icon{
+  width: 43rpx;
+  height: 43rpx;
+  position: absolute;
+  top: 12rpx;
+  left: 12rpx;
+}
+.exclusive-big-item-pic image{
+  width: 100%;
+  height: 100%;
+}
+.exclusive-big-item text{
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  letter-spacing: 2rpx;
+  word-break: break-all;
+  padding-left: 10rpx;
+  padding-right: 12rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #333;
+}
+.recommend-mv-content{
+  overflow: hidden;
+}
+.recommend-mv-item{
+  float: left;
+  width: 357rpx;
+  margin-left: 9rpx;
+  margin-right: 9rpx;
+  margin-top: 28rpx;
+}
+.recommend-mv-item-pic{
+  width: 357rpx;
+  height: 202rpx;
+}
+.recommend-mv-item-pic image{
+  width: 100%;
+  height: 100%;
+}
+.recommend-mv-item .name{
+  font-size: 24rpx;
+  color: #333;
+  margin-top: 14rpx;
+  letter-spacing: 2rpx;
+  word-break: break-all;
+  padding-left: 10rpx;
+  padding-right: 12rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.recommend-mv-item .artist{
+  font-size: 22rpx;
+  color: #949597;
+  margin-top: 9rpx;
+  letter-spacing: 2rpx;
+  word-break: break-all;
+  padding-left: 10rpx;
+  padding-right: 12rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
