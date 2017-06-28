@@ -1,1 +1,8 @@
-{}
+{
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d43b33",
+    "navigationBarTitleText": "账号",
+    "navigationBarTextStyle":"#fff"
+  }
+}

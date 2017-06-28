@@ -120,7 +120,7 @@
   color: #333;
 }
 .recommend-song-list{
-  padding-bottom: 40rpx;
+  padding-bottom: 30rpx;
 }
 .recommend-song-list-title{
   font-size: 0;

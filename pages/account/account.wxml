@@ -1,2 +1,3 @@
-<!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+<view class="account">
+  
+</view>

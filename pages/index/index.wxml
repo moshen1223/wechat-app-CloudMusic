@@ -21,108 +21,108 @@
   </view>
 </view>
 <view class="index-content">
-<swiper indicator-dots="{{true}}" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="rgba(255, 0, 0, .8)"
-  autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" circular="{{true}}">
-  <block wx:for="{{bannerList}}">
-    <swiper-item class="banner-pic">
-      <image src="{{item.pic}}"/>
-    </swiper-item>
-  </block>
-</swiper>
-<!-- 每日推荐 -->
-<view class="recommend">
-  <view class="recommend-item">
-    <view><image src="../../images/fm.png" /></view>
-    <text>私人FM</text>
-  </view>
-  <view class="recommend-item">
-    <view class="recommend-date">
-      <image src="../../images/calendar.png" />
-      <text>{{currentDate}}</text>
+  <swiper indicator-dots="{{true}}" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="rgba(255, 0, 0, .8)"
+    autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" circular="{{true}}">
+    <block wx:for="{{bannerList}}">
+      <swiper-item class="banner-pic">
+        <image src="{{item.pic}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 每日推荐 -->
+  <view class="recommend">
+    <view class="recommend-item">
+      <view><image src="../../images/fm.png" /></view>
+      <text>私人FM</text>
     </view>
-    <text>每日歌曲推荐</text>
-  </view>
-  <view class="recommend-item">
-    <view><image src="../../images/ranking.png" /></view>
-    <text>云音乐热歌榜</text>
-  </view>
-</view>
-<!-- 推荐歌单 -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>推荐歌单</text><image src="../../images/rightArrow.png"></image></view>
-  <view class="recommend-song-content">
-    <block wx:for="{{recommendList}}">
-      <view class="recommend-item">
-        <view class="recommend-item-pic">
-          <image src="{{item.picUrl}}"/>
-          <view class="playCount"><image src="../../images/earphone.png"/><text>{{item.trackCount}}万</text></view>
-        </view>
-        <text>{{item.name}}</text>
+    <view class="recommend-item">
+      <view class="recommend-date">
+        <image src="../../images/calendar.png" />
+        <text>{{currentDate}}</text>
       </view>
-    </block>
+      <text>每日歌曲推荐</text>
+    </view>
+    <view class="recommend-item">
+      <view><image src="../../images/ranking.png" /></view>
+      <text>云音乐热歌榜</text>
+    </view>
   </view>
-</view>
-<!-- 独家放送 -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>独家放送</text><image src="../../images/rightArrow.png"></image></view>
-  <view class="exclusive-small">
-    <block wx:for="{{privatecontentList}}" wx:if="{{index>0}}">
-      <view class="exclusive-small-item">
-        <view class="exclusive-small-item-pic">
-          <image src="{{item.sPicUrl}}"/>
-          <view class="icon"><image src="../../images/mv.png"/></view>
+  <!-- 推荐歌单 -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>推荐歌单</text><image src="../../images/rightArrow.png"></image></view>
+    <view class="recommend-song-content">
+      <block wx:for="{{recommendList}}">
+        <view class="recommend-item">
+          <view class="recommend-item-pic">
+            <image src="{{item.picUrl}}"/>
+            <view class="playCount"><image src="../../images/earphone.png"/><text>{{item.trackCount}}万</text></view>
+          </view>
+          <text>{{item.name}}</text>
         </view>
-        <text>{{item.name}}</text>
-      </view>
-    </block>
+      </block>
+    </view>
   </view>
-  <view class="exclusive-big">
-    <block wx:for="{{privatecontentList}}" wx:if="{{index==0}}">
-      <view class="exclusive-big-item">
-        <view class="exclusive-big-item-pic">
-          <image src="{{item.picUrl}}"/>
-          <view class="icon"><image src="../../images/mv.png"/></view>
+  <!-- 独家放送 -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>独家放送</text><image src="../../images/rightArrow.png"></image></view>
+    <view class="exclusive-small">
+      <block wx:for="{{privatecontentList}}" wx:if="{{index>0}}">
+        <view class="exclusive-small-item">
+          <view class="exclusive-small-item-pic">
+            <image src="{{item.sPicUrl}}"/>
+            <view class="icon"><image src="../../images/mv.png"/></view>
+          </view>
+          <text>{{item.name}}</text>
         </view>
-        <text>{{item.name}}</text>
-      </view>
-    </block>
-  </view>
-</view>
-<!-- 最新音乐 -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>最新音乐</text><image src="../../images/rightArrow.png"></image></view>
-</view>
-<!-- 推荐MV -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>推荐MV</text><image src="../../images/rightArrow.png"></image></view>
-  <view class="recommend-mv-content">
-    <block wx:for="{{recommendMv}}">
-      <view class="recommend-mv-item">
-        <view class="recommend-mv-item-pic">
-          <image src="{{item.picUrl}}"/>
+      </block>
+    </view>
+    <view class="exclusive-big">
+      <block wx:for="{{privatecontentList}}" wx:if="{{index==0}}">
+        <view class="exclusive-big-item">
+          <view class="exclusive-big-item-pic">
+            <image src="{{item.picUrl}}"/>
+            <view class="icon"><image src="../../images/mv.png"/></view>
+          </view>
+          <text>{{item.name}}</text>
         </view>
-        <text class="name">{{item.name}}</text>
-        <text class="artist">{{item.artistName}}</text>
-      </view>
-    </block>
+      </block>
+    </view>
   </view>
-</view>
-<!-- 推荐专栏 -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>推荐专栏</text><image src="../../images/rightArrow.png"></image></view>
-</view>
-<!-- 主播电台 -->
-<view class="recommend-song-list">
-  <view class="recommend-song-list-title"><text>主播电台</text><image src="../../images/rightArrow.png"></image></view>
-  <view class="recommend-song-content">
-    <block wx:for="{{djprogramList}}">
-      <view class="recommend-item">
-        <view class="recommend-item-pic">
-          <image src="{{item.picUrl}}"/>
+  <!-- 最新音乐 -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>最新音乐</text><image src="../../images/rightArrow.png"></image></view>
+  </view>
+  <!-- 推荐MV -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>推荐MV</text><image src="../../images/rightArrow.png"></image></view>
+    <view class="recommend-mv-content">
+      <block wx:for="{{recommendMv}}">
+        <view class="recommend-mv-item">
+          <view class="recommend-mv-item-pic">
+            <image src="{{item.picUrl}}"/>
+          </view>
+          <text class="name">{{item.name}}</text>
+          <text class="artist">{{item.artistName}}</text>
         </view>
-        <text>{{item.name}}</text>
-      </view>
-    </block>
+      </block>
+    </view>
   </view>
-</view>
+  <!-- 推荐专栏 -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>推荐专栏</text><image src="../../images/rightArrow.png"></image></view>
+  </view>
+  <!-- 主播电台 -->
+  <view class="recommend-song-list">
+    <view class="recommend-song-list-title"><text>主播电台</text><image src="../../images/rightArrow.png"></image></view>
+    <view class="recommend-song-content">
+      <block wx:for="{{djprogramList}}">
+        <view class="recommend-item">
+          <view class="recommend-item-pic">
+            <image src="{{item.picUrl}}"/>
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>
