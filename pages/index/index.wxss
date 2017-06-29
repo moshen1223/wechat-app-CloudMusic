@@ -49,27 +49,27 @@
   height: 48rpx;
   margin-top: 17rpx;
 }
-.btn-area{
+.navbar{
   height: 78rpx;
   display: flex;
   background: #fff;
   align-items: center;
+  position: relative;
 }
-.btn-area view{
+.navbar .navbar-item{
   flex: 1;
   font-size: 28rpx;
   text-align: center;
 }
-.btn-area view text{
-  height: 74rpx;
-  border-bottom: 4rpx solid #fff;
-  display:inline-block;
-  line-height:74rpx;
-  padding-left: 10rpx;
-  padding-right: 10rpx;
-}
-.btn-area view .active{
-  border-bottom: 4rpx solid #d43b33;
+.navbar__slider{
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 190rpx;
+  height: 3px;
+  background-color: #d43b33;
+  -webkit-transition: -webkit-transform .3s;
 }
 .banner-pic{
   width: 750rpx;
@@ -103,7 +103,7 @@
 .recommend .recommend-item .recommend-date text{
   position: absolute;
   top: 28rpx;
-  left: 32rpx;
+  left: 27rpx;
   color: #d43b33;
   font-size: 14px;
 }
