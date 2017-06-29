@@ -1,6 +1,7 @@
 let app = getApp();
 const ERROR_CODE = 200;
-let sliderWidth = 96;
+let sliderWidth = 96, pageCount = 1,lock = false;
+
 Page({
   data:{
     tabs:['个性推荐','歌单','主播电台','排行榜'],
@@ -13,7 +14,7 @@ Page({
     privatecontentList: [],
     recommendMv:[],
     djprogramList: [],
-    songList: []
+    songList: [],
   },
 
   onLoad:function(){
@@ -22,6 +23,11 @@ Page({
 
   onReady:function(){
     this.fetchRecommendData();
+  },
+  // 上拉加载更多
+  onReachBottom:function(){
+    pageCount++;
+    this.fetchSongList(pageCount);
   },
   // 获取系统信息
   getSystemInfo(){
@@ -136,13 +142,14 @@ Page({
     });
   },
   // 获取歌单
-  fetchSongList(){
+  fetchSongList(num){
     let that = this;
+    if(lock == true) return;
     wx.request({
       url: app.api.url+'/top/playlist',
       data: {
-        'limit': 20,
-        'order': 'new'
+        'limit': 20*num,
+        'order': 'hot'
       },
       method: 'GET',
       // header: {},
@@ -158,6 +165,7 @@ Page({
 
       },
       complete: function() {
+        lock = false;
       }
     });
   },
@@ -190,6 +198,7 @@ Page({
       }
     });
   },
+  // 分享
   onShareAppMessage: function() {
     return {
       title: '', // 分享标题
@@ -208,7 +217,7 @@ Page({
         this.fetchRecommendData();
         break;
       case '1':
-        this.fetchSongList();
+        this.fetchSongList(pageCount);
         break;
       case '2':
         this.fetchMVData();

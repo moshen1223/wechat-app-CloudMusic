@@ -132,7 +132,29 @@
   </view>
   <!-- 歌单 -->
   <view class="songList-content" hidden="{{activeIndex != 1}}">
-    {{songList}}
+    <view class="songList-title">
+      <view class="title-all">
+        <view><text>全部歌单</text><image src="../../images/rightArrow.png"/></view>
+      </view>
+      <view class="title-type">
+        <text>欧美</text>
+        <text>轻音乐</text>
+        <text>摇滚</text>
+      </view>
+    </view>
+    <view class="songList-song-content">
+      <block wx:for="{{songList}}">
+        <view class="songList-item">
+          <view class="songList-item-pic">
+            <image src="{{item.coverImgUrl}}"/>
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="songList-loadAll">
+      <text>上拉加载</text>
+    </view>
   </view>
   <!-- 电台 -->
   <view class="tv-content" hidden="{{activeIndex != 2}}">电台</view>
